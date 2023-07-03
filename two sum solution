@@ -1,0 +1,18 @@
+class Solution {
+      public static  int[] twoSum(int[] nums, int target) {
+        int row = 0,col = 0;
+        
+       outer: for(row = 0 ; row < (nums.length-1); row++) {
+            
+            for (col = row+1; col < (nums.length); col++) {
+                
+                if (target == (nums[row] + nums[col])) {
+                    break outer;
+                }
+            }
+        }
+
+        return new int[]{row ,col};
+       
+    }
+}
